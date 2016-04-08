@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Каталог</title>
+    <title>О компании</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
@@ -42,13 +42,13 @@
         <nav id="mainmenu" class="mainmenu">
             <ul>
                 <li class="logo-wrapper"><a href="index.html"><img src="<?=base_url();?>/img/mPurpose-logo.png" alt="Multipurpose Twitter Bootstrap Template"></a></li>
-                <li>
+                <li class="active">
                     <a href="index.html">Главная</a>
                 </li>
                 <li>
                     <a href="features.html">О компании</a>
                 </li>
-                <li class="has-submenu active">
+                <li class="has-submenu">
                     <a href="#">Каталог продукции</a>
                     <div class="mainmenu-submenu">
                         <div class="mainmenu-submenu-inner">
@@ -76,7 +76,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Proucts Listing (3 Columns)</h1>
+                <h1>About Us</h1>
             </div>
         </div>
     </div>
@@ -85,36 +85,111 @@
 <div class="section">
     <div class="container">
         <div class="row">
-            <?php foreach($products as $item):?>
-            <div class="col-sm-4">
-                <!-- Product -->
-                <div class="shop-item">
-                    <!-- Product Image -->
-                    <div class="image">
-                        <a href="page-product-details.html"><img src="img/product1.jpg" alt="Item Name"></a>
-                    </div>
-                    <!-- Product Title -->
-                    <div class="title">
-                        <h3><a href="page-product-details.html"><?=$item['naimProduct'];?></a></h3>
-                    </div>
-                    <!-- Product Price-->
-                    <div class="price">
-                        <span class="price-was"></span><?=$item['price'];?>
-                    </div>
-                    <!-- Product Description-->
-                    <div class="description">
-                        <p><?=$item['description'];?></p>
-                    </div>
-                    <!-- Add to Cart Button -->
-                    <div class="actions">
-                        <a href="page-product-details.html" class="btn"><i class="icon-shopping-cart icon-white"></i> Добавить в корзину</a>
-                    </div>
-                </div>
-                <!-- End Product -->
+            <div class="col-sm-6">
+                <h3>We are leading company</h3>
+                <p>
+                    Donec elementum mi vitae enim fermentum lobortis. In hac habitasse platea dictumst. Ut pellentesque, orci sed mattis consequat, libero ante lacinia arcu, ac porta lacus urna in lorem. Praesent consectetur tristique augue, eget elementum diam suscipit id.
+                </p>
+                <h3>Wide range of services</h3>
+                <p>
+                    Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam condimentum laoreet sagittis. Duis quis ullamcorper leo. Suspendisse potenti.
+                </p>
             </div>
-            <?php endforeach;?>
+            <div class="col-sm-6">
+                <div class="video-wrapper">
+                    <iframe src="http://player.vimeo.com/video/47000322?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                </div>
+            </div>
         </div>
-        <?php echo $this->pagination->create_links();?>
+    </div>
+</div>
+
+<!-- Press Coverage -->
+<div class="section">
+    <div class="container">
+        <h2>Featured on</h2>
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <div class="in-press press-wired">
+                    <a href="#">Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae</a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="in-press press-mashable">
+                    <a href="#">Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae</a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="in-press press-techcrunch">
+                    <a href="#">Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Press Coverage -->
+
+<div class="section">
+    <div class="container">
+        <h2>Our Services</h2>
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="service-wrapper">
+                    <img src="img/service-icon/diamond.png" alt="Service Name">
+                    <h3>Brilliant Look</h3>
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames. <a href="#">Read more...</a></p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="service-wrapper">
+                    <img src="img/service-icon/ruler.png" alt="Service Name">
+                    <h3>Themeable</h3>
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames. <a href="#">Read more...</a></p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="service-wrapper">
+                    <img src="img/service-icon/box.png" alt="Service Name">
+                    <h3>Features Rich</h3>
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames. <a href="#">Read more...</a></p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="service-wrapper">
+                    <img src="img/service-icon/diamond.png" alt="Service Name">
+                    <h3>Brilliant Look</h3>
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames. <a href="#">Read more...</a></p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="service-wrapper">
+                    <img src="img/service-icon/diamond.png" alt="Service Name">
+                    <h3>Brilliant Look</h3>
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames. <a href="#">Read more...</a></p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="service-wrapper">
+                    <img src="img/service-icon/ruler.png" alt="Service Name">
+                    <h3>Themeable</h3>
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames. <a href="#">Read more...</a></p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="service-wrapper">
+                    <img src="img/service-icon/box.png" alt="Service Name">
+                    <h3>Features Rich</h3>
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames. <a href="#">Read more...</a></p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="service-wrapper">
+                    <img src="img/service-icon/diamond.png" alt="Service Name">
+                    <h3>Brilliant Look</h3>
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames. <a href="#">Read more...</a></p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

@@ -1771,12 +1771,21 @@ span.color-red {
   margin-top: 15px;
   text-align: center;
 }
-.pagination > li > a,
-.pagination > li > span {
+.pagination >  a:first-child{
+  border-radius: 10px 0 0 10px;
+}
+.pagination >  a:last-child{
+  border-radius: 0 10px 10px 0;
+}
+
+.pagination >  a,
+.pagination >  span {
+  padding: 15px;
+  background: #FFF;
   border: none;
   border-bottom: 3px solid #FFF;
   color: #666666;
-  margin-left: 0;
+  margin-left: -2px;
   margin-bottom: 5px;
   -webkit-transition: all .25s linear;
   -moz-transition: all .25s linear;
@@ -1784,13 +1793,14 @@ span.color-red {
   -ms-transition: all .25s linear;
   transition: all .25s linear;
 }
-.pagination > li > a:hover,
-.pagination > li > a:focus,
+.pagination >  a:hover,
+.pagination >  a:focus,
 .pagination > .active > a,
 .pagination > .active > span {
   background: #FFF;
+  text-decoration: none;
 }
-.pagination > li > a:hover {
+.pagination >  a:hover {
   border-bottom: 3px solid #666666;
 }
 .pagination > .active > a,

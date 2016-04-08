@@ -8,10 +8,10 @@ class Catalog extends CI_Controller {
         // pagination
         $config['base_url'] = base_url().'index.php/catalog/index/'; // адрес где происходит построение навигации
         $config['total_rows'] = $this->db->count_all('product'); // сколько всего записей в этой таблице, откуда будем брать записи. Используем данную функцию для подсчета всех записей.
-        $config['per_page'] = 1; // сколько записей показывать на странице
+        $config['per_page'] = 12; // сколько записей показывать на странице
         $config['full_tag_open'] = '<div class="pagination-wrapper ">
-            <ul class="pagination pagination-lg">';  // тег открытия навигации
-        $config['full_tag_close'] = '</ul></div>'; // тег закрытия навигации
+            <div class="pagination pagination-lg">';  // тег открытия навигации
+        $config['full_tag_close'] = '</div></div>'; // тег закрытия навигации
 
         $this->pagination->initialize($config); // инициализируем навигацию с нашими настройками.
 
