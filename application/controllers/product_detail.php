@@ -7,7 +7,7 @@ class Product_detail extends CI_Controller {
     {
         $this->load->view('produc_detail_view');
        // $data['products'] = $this->product_detail_model->get_products();
-        $this->load->view('produc_detail_view',$data);
+        //$this->load->view('produc_detail_view',$data);
     }
 
 }
