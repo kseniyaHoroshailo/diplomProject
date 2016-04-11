@@ -48,20 +48,8 @@
                 <li>
                     <a href="features.html">О компании</a>
                 </li>
-                <li class="has-submenu">
-                    <a href="#">Каталог продукции</a>
-                    <div class="mainmenu-submenu">
-                        <div class="mainmenu-submenu-inner">
-                            <div>
-                                <h4>Категории</h4>
-                                <ul>
-                                    <li><a href="index.html">Мальчикам</a></li>
-                                    <li><a href="page-homepage-sample.html">Девочкам</a></li>
-                                    <li><a href="page-homepage-sample.html">Малышам</a></li>
-                                </ul>
-                            </div>
-                        </div><!-- /mainmenu-submenu-inner -->
-                    </div><!-- /mainmenu-submenu -->
+                <li>
+                    <a href="features.html">Каталог продукции</a>
                 </li>
                 <li>
                     <a href="credits.html">Контакты</a>
@@ -85,6 +73,7 @@
 <div class="section">
     <div class="container">
         <div class="row">
+            <?php foreach($products as $item):?>
             <!-- Product Image & Available Colors -->
             <div class="col-sm-6">
                 <div class="product-image-large">
@@ -119,6 +108,7 @@
                     </tr>
                 </table>
             </div>
+            <?php endforeach;?>
             <!-- End Product Summary & Options -->
 
             <!-- Full Description & Specification -->
