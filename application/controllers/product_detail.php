@@ -6,8 +6,6 @@ class Product_detail extends CI_Controller {
     public function index()
     {
        $data['products'] = $this->product_detail_model->get_products();
-        //$id_product = $_REQUEST['id_product'];
-
        $this->load->view('produc_detail_view',$data);
     }
 

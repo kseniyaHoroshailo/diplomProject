@@ -5,7 +5,7 @@ class Product_detail_model extends CI_Model {
     function get_products($num, $offset)
     {
         $query = $this->db->get('product',$num, $offset);
-        return $query->result_array();
+        return $query->SELECT * FROM product WHERE product_id = intval($_GET['product_id']);
     }
 }
 
