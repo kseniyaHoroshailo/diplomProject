@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Каталог</title>
+    <title>404</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
@@ -48,7 +48,7 @@
                 <li>
                     <a href="<?= base_url(); ?>index.php/about_us">О компании</a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="<?= base_url(); ?>index.php/catalog">Каталог продукции</a>
                 </li>
                 <li>
@@ -64,7 +64,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Каталог продукции</h1>
+                <h1>Страница не найдена...</h1>
             </div>
         </div>
     </div>
@@ -73,36 +73,13 @@
 <div class="section">
     <div class="container">
         <div class="row">
-            <?php foreach($products as $item):?>
-            <div class="col-sm-4">
-                <!-- Product -->
-                <div class="shop-item">
-                    <!-- Product Image -->
-                    <div class="image">
-                        <a href="page-product-details.html"><img src="img/product1.jpg" alt="Item Name"></a>
-                    </div>
-                    <!-- Product Title -->
-                    <div class="title">
-                        <h3><a href="page-product-details.html"><?=$item['naimProduct'];?></a></h3>
-                    </div>
-                    <!-- Product Price-->
-                    <div class="price">
-                        <span class="price-was"></span><?=$item['price'];?>
-                    </div>
-                    <!-- Product Description-->
-                    <div class="description">
-                        <p><?=$item['description'];?></p>
-                    </div>
-                    <!-- Add to Cart Button -->
-                    <div class="actions">
-                        <a href="page-product-details.html" class="btn"><i class="icon-shopping-cart icon-white"></i> Добавить в корзину</a>
-                    </div>
+            <div class="col-sm-12">
+                <div class="error-page-wrapper">
+                    <p>Извините, такой страницы не существует...</p>
+                    <p>Вернуться на <a href="<?= base_url(); ?>index.php/welcome/">Главную страницу</a>?</p>
                 </div>
-                <!-- End Product -->
             </div>
-            <?php endforeach;?>
         </div>
-        <?php echo $this->pagination->create_links();?>
     </div>
 </div>
 
@@ -113,10 +90,10 @@
             <div class="col-footer col-md-3 col-xs-6">
                 <h3>Навигация</h3>
                 <ul class="no-list-style footer-navigate-section">
-                    <li><a href="<?= base_url(); ?>/index.php/welcome">Главная</a></li>
-                    <li><a href="<?= base_url(); ?>/index.php/about_us">О компании</a></li>
-                    <li><a href="<?= base_url(); ?>/index.php/catalog">Каталог продукции</a></li>
-                    <li><a href="<?= base_url(); ?>/index.php/contacts">Контакты</a></li>
+                    <li><a href="<?= base_url(); ?>index.php/welcome">Главная</a></li>
+                    <li><a href="<?= base_url(); ?>index.php/about_us">О компании</a></li>
+                    <li><a href="<?= base_url(); ?>index.php/catalog">Каталог продукции</a></li>
+                    <li><a href="<?= base_url(); ?>index.php/contacts">Контакты</a></li>
                 </ul>
             </div>
 

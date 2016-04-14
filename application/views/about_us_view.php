@@ -34,25 +34,25 @@
         <div class="menuextras">
             <div class="extras">
                 <ul>
-                    <li class="shopping-cart-items"><i class="glyphicon glyphicon-shopping-cart icon-white"></i> <a href="page-shopping-cart.html"><b>3 items</b></a></li>
+                    <li class="shopping-cart-items"><i class="glyphicon glyphicon-shopping-cart icon-white"></i> <a href="page-shopping-cart.html"><b>Корзина</b></a></li>
                     <li><a href="page-login.html">Войти</a></li>
                 </ul>
             </div>
         </div>
         <nav id="mainmenu" class="mainmenu">
             <ul>
-                <li class="logo-wrapper"><a href="index.html"><img src="<?=base_url();?>/img/mPurpose-logo.png" alt="Multipurpose Twitter Bootstrap Template"></a></li>
+                <li class="logo-wrapper"><a href="<?= base_url(); ?>index.php/welcome"><img src="<?=base_url();?>/img/mPurpose-logo.png" alt="Multipurpose Twitter Bootstrap Template"></a></li>
+                <li>
+                    <a href="<?= base_url(); ?>index.php/welcome">Главная</a>
+                </li>
                 <li class="active">
-                    <a href="index.html">Главная</a>
+                    <a href="<?= base_url(); ?>index.php/about_us">О компании</a>
                 </li>
                 <li>
-                    <a href="features.html">О компании</a>
+                    <a href="<?= base_url(); ?>index.php/catalog">Каталог продукции</a>
                 </li>
                 <li>
-                    <a href="features.html">Каталог продукции</a>
-                </li>
-                <li>
-                    <a href="credits.html">Контакты</a>
+                    <a href="<?= base_url(); ?>index.php/contacts">Контакты</a>
                 </li>
             </ul>
         </nav>
@@ -64,7 +64,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>About Us</h1>
+                <h1>О компании</h1>
             </div>
         </div>
     </div>
@@ -74,107 +74,30 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-                <h3>We are leading company</h3>
+                <h3>О МАГАЗИНЕ</h3>
                 <p>
-                    Donec elementum mi vitae enim fermentum lobortis. In hac habitasse platea dictumst. Ut pellentesque, orci sed mattis consequat, libero ante lacinia arcu, ac porta lacus urna in lorem. Praesent consectetur tristique augue, eget elementum diam suscipit id.
-                </p>
-                <h3>Wide range of services</h3>
+                    Beltoy.by – уникальный магазин, который собрал в ассортименте неповторимую коллекцию детских игрушек от наилучших производителей.
+
+                    Игрушки дарят искренние радостные эмоции каждому ребенку. Практически сразу игрушки Beltoy покорили сердца многих детей и взрослых, оставляя по себе светлые впечатления. Ведь любое изделие, предоставляемое магазином, выполнено по наилучшим технологиям и оригинальным творческим подходам.</p>
+                <h3>ИГРУШКИ, КОТОРЫЕ ВСЕГДА РАДУЮТ</h3>
                 <p>
-                    Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam condimentum laoreet sagittis. Duis quis ullamcorper leo. Suspendisse potenti.
+                    Качество использованных в производстве материалов гарантирует экологичность и здоровое происхождение любой игрушки, что благоприятно сказывается на здоровье ребенка. Благодаря органичности происхождения материалов изготовления можно не ограничивать веселое времяпровождение с игрушками, без опаски контактируя с изделием даже круглые сутки.
+
+                    В свою очередь оригинальные творческие идеи производителя позволяют создавать искренно увлекающие и симпатичные игрушки. Наилучшие радостные эмоции находят свое удачное воплощение в декорировании игрушек из каталога Beltoy. По настоящему креативные разработки постоянно впечатляют и доставляют новые ощущения, благодаря чему игрушки никогда не надоедают.
                 </p>
+                <h3>РАДОСТЬ, ЧТО ПОДКРЕПЛЕНА ГАРАНТИЕЙ</h3>
+                <p>Крайне важным свойством игрушек премиум класса является высокое качество. Выбирая эксклюзивное изделия, большинство покупателей надеется на прочность выбранной игрушки и соответствующий уровень качества. Ассортимент из каталога Beltoy предоставляет только высококачественные и полностью безопасные изделия эксклюзивной разработки.
+
+                    Качество продаваемых игрушек подтверждается соответствующими документами:
+
+                    Гарантией от имени производителя;
+                    Специальными сертификатами;
+                    Гарантией по закону о защите потребительских прав.
+                    Персонал магазина эксклюзивных игрушек бережно относится к уникальным изделиям, что проявляется в течение всего процесса обслуживания, еще задолго до того, как покупатель выберет интересующий товар. Начиная бережной отгрузкой на склад, работники аккуратно обращаются с игрушками, вплоть до курьерской доставки новым хозяевам изделия. Поэтому качество и внешний вид игрушек гарантированно соответствуют заявленным.</p>
             </div>
             <div class="col-sm-6">
                 <div class="video-wrapper">
-                    <iframe src="http://player.vimeo.com/video/47000322?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Press Coverage -->
-<div class="section">
-    <div class="container">
-        <h2>Featured on</h2>
-        <div class="row">
-            <div class="col-md-4 col-sm-6">
-                <div class="in-press press-wired">
-                    <a href="#">Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae</a>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="in-press press-mashable">
-                    <a href="#">Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae</a>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="in-press press-techcrunch">
-                    <a href="#">Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Press Coverage -->
-
-<div class="section">
-    <div class="container">
-        <h2>Our Services</h2>
-        <div class="row">
-            <div class="col-md-3 col-sm-6">
-                <div class="service-wrapper">
-                    <img src="img/service-icon/diamond.png" alt="Service Name">
-                    <h3>Brilliant Look</h3>
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames. <a href="#">Read more...</a></p>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="service-wrapper">
-                    <img src="img/service-icon/ruler.png" alt="Service Name">
-                    <h3>Themeable</h3>
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames. <a href="#">Read more...</a></p>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="service-wrapper">
-                    <img src="img/service-icon/box.png" alt="Service Name">
-                    <h3>Features Rich</h3>
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames. <a href="#">Read more...</a></p>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="service-wrapper">
-                    <img src="img/service-icon/diamond.png" alt="Service Name">
-                    <h3>Brilliant Look</h3>
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames. <a href="#">Read more...</a></p>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="service-wrapper">
-                    <img src="img/service-icon/diamond.png" alt="Service Name">
-                    <h3>Brilliant Look</h3>
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames. <a href="#">Read more...</a></p>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="service-wrapper">
-                    <img src="img/service-icon/ruler.png" alt="Service Name">
-                    <h3>Themeable</h3>
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames. <a href="#">Read more...</a></p>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="service-wrapper">
-                    <img src="img/service-icon/box.png" alt="Service Name">
-                    <h3>Features Rich</h3>
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames. <a href="#">Read more...</a></p>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="service-wrapper">
-                    <img src="img/service-icon/diamond.png" alt="Service Name">
-                    <h3>Brilliant Look</h3>
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames. <a href="#">Read more...</a></p>
+                    <iframe src="http://player.vimeo.com/video/160896933?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                 </div>
             </div>
         </div>
@@ -188,24 +111,24 @@
             <div class="col-footer col-md-3 col-xs-6">
                 <h3>Навигация</h3>
                 <ul class="no-list-style footer-navigate-section">
-                    <li><a href="page-blog-posts.html">Главная</a></li>
-                    <li><a href="page-portfolio-3-columns-2.html">О компании</a></li>
-                    <li><a href="page-products-3-columns.html">Каталог продукции</a></li>
-                    <li><a href="page-services-3-columns.html">Контакты</a></li>
+                    <li><a href="<?= base_url(); ?>index.php/welcome">Главная</a></li>
+                    <li><a href="<?= base_url(); ?>index.php/about_us">О компании</a></li>
+                    <li><a href="<?= base_url(); ?>index.php/catalog">Каталог продукции</a></li>
+                    <li><a href="<?= base_url(); ?>index.php/contacts">Контакты</a></li>
                 </ul>
             </div>
 
             <div class="col-footer col-md-4 col-xs-6">
                 <h3>Контакты</h3>
                 <p class="contact-us-details">
-                    <b>Address:</b> 123 Fake Street, LN1 2ST, London, United Kingdom<br/>
-                    <b>Phone:</b> +44 123 654321<br/>
-                    <b>Fax:</b> +44 123 654321<br/>
-                    <b>Email:</b> <a href="mailto:getintoutch@yourcompanydomain.com">getintoutch@yourcompanydomain.com</a>
+                    <b>Адрес:</b> Беларусь, Гомель<br/>
+                    <b>Телефон:</b> +375 29 2249783<br/>
+                    <b>Факс:</b> +375 29 2249783<br/>
+                    <b>Email:</b> <a href="mailto:beligrushka@mail.ru">beligrushka@mail.ru</a>
                 </p>
             </div>
             <div class="col-footer col-md-2 col-xs-6">
-                <h3>Stay Connected</h3>
+                <h3>Оставайтесь на связи</h3>
                 <ul class="footer-stay-connected no-list-style">
                     <li><a href="#" class="facebook"></a></li>
                     <li><a href="#" class="twitter"></a></li>

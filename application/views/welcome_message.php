@@ -34,25 +34,25 @@
 		<div class="menuextras">
 			<div class="extras">
 				<ul>
-					<li class="shopping-cart-items"><i class="glyphicon glyphicon-shopping-cart icon-white"></i> <a href="page-shopping-cart.html"><b>3 items</b></a></li>
+					<li class="shopping-cart-items"><i class="glyphicon glyphicon-shopping-cart icon-white"></i> <a href="page-shopping-cart.html"><b>Корзина</b></a></li>
 					<li><a href="page-login.html">Войти</a></li>
 				</ul>
 			</div>
 		</div>
 		<nav id="mainmenu" class="mainmenu">
 			<ul>
-				<li class="logo-wrapper"><a href="index.html"><img src="<?=base_url();?>/img/mPurpose-logo.png" alt="Multipurpose Twitter Bootstrap Template"></a></li>
+				<li class="logo-wrapper"><a href="<?= base_url(); ?>index.php/welcome"><img src="<?=base_url();?>/img/mPurpose-logo.png" alt="Multipurpose Twitter Bootstrap Template"></a></li>
 				<li class="active">
-					<a href="index.html">Главная</a>
+					<a href="<?= base_url(); ?>index.php/welcome">Главная</a>
 				</li>
 				<li>
-					<a href="features.html">О компании</a>
+					<a href="<?= base_url(); ?>index.php/about_us">О компании</a>
 				</li>
 				<li>
-					<a href="credits.html">Категории</a>
+					<a href="<?= base_url(); ?>index.php/catalog">Каталог продукции</a>
 				</li>
 				<li>
-					<a href="credits.html">Контакты</a>
+					<a href="<?= base_url(); ?>index.php/contacts">Контакты</a>
 				</li>
 			</ul>
 		</nav>
@@ -169,24 +169,24 @@
 			<div class="col-footer col-md-3 col-xs-6">
 				<h3>Навигация</h3>
 				<ul class="no-list-style footer-navigate-section">
-					<li><a href="page-blog-posts.html">Главная</a></li>
-					<li><a href="page-portfolio-3-columns-2.html">О компании</a></li>
-					<li><a href="page-products-3-columns.html">Каталог продукции</a></li>
-					<li><a href="page-services-3-columns.html">Контакты</a></li>
+					<li><a href="<?= base_url(); ?>index.php/welcome">Главная</a></li>
+					<li><a href="<?= base_url(); ?>index.php/about_us">О компании</a></li>
+					<li><a href="<?= base_url(); ?>index.php/catalog">Каталог продукции</a></li>
+					<li><a href="<?= base_url(); ?>index.php/contacts">Контакты</a></li>
 				</ul>
 			</div>
 
 			<div class="col-footer col-md-4 col-xs-6">
 				<h3>Контакты</h3>
 				<p class="contact-us-details">
-					<b>Address:</b> 123 Fake Street, LN1 2ST, London, United Kingdom<br/>
-					<b>Phone:</b> +44 123 654321<br/>
-					<b>Fax:</b> +44 123 654321<br/>
-					<b>Email:</b> <a href="mailto:getintoutch@yourcompanydomain.com">getintoutch@yourcompanydomain.com</a>
+					<b>Адрес:</b> Беларусь, Гомель<br/>
+					<b>Телефон:</b> +375 29 2249783<br/>
+					<b>Факс:</b> +375 29 2249783<br/>
+					<b>Email:</b> <a href="mailto:beligrushka@mail.ru">beligrushka@mail.ru</a>
 				</p>
 			</div>
 			<div class="col-footer col-md-2 col-xs-6">
-				<h3>Stay Connected</h3>
+				<h3>Оставайтесь на связи</h3>
 				<ul class="footer-stay-connected no-list-style">
 					<li><a href="#" class="facebook"></a></li>
 					<li><a href="#" class="twitter"></a></li>
@@ -196,7 +196,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-<!--				<div class="footer-copyright">&copy; 2013 mPurpose. All rights reserved.</div>-->
+				<!--				<div class="footer-copyright">&copy; 2013 mPurpose. All rights reserved.</div>-->
 			</div>
 		</div>
 	</div>

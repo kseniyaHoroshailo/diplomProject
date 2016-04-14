@@ -46,7 +46,7 @@ $(document).ready(function(){
 		L.tileLayer('http://{s}.tile.cloudmade.com/{key}/22677/256/{z}/{x}/{y}.png', {
 			key: 'BC9A493B41014CAABB98F0471D759707'
 		}).addTo(map);
-		L.marker([51.5, -0.09]).addTo(map).bindPopup("<b>Some Company</b><br/>123 Fake Street<br/>LN1 2ST<br/>London</br>United Kingdom").openPopup();
+		//L.marker([51.5, -0.09]).addTo(map).bindPopup("<b>ЗАО Белигрушка</b><br/>ул. Барыкинв 94<br/>LN1 2ST<br/>London</br>United Kingdom").openPopup();
 	}
 
 	$( window ).resize(function() {

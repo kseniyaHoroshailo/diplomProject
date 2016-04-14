@@ -7,13 +7,4 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('welcome_message');
 	}
-
-	public function goToCatalog()
-	{
-		$this->load->helper('url');
-			redirect('/catalog');
-	}
 }
-
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */
