@@ -17,6 +17,7 @@ class Catalog extends CI_Controller {
 
 
         $this->load->model('catalogs_model');
+        $data['productCategory'] = $this->catalogs_model->get_category($config);
         $data['products'] = $this->catalogs_model->get_products($config['per_page'], $this->uri->segment(3));
         $this->load->view('catalogs_view',$data);
 

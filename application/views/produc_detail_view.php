@@ -77,7 +77,7 @@
             <!-- Product Image & Available Colors -->
             <div class="col-sm-6">
                 <div class="product-image-large">
-                    <img src="img/product3.jpg" alt="Item Name">
+                    <img src="<?= $item['imagePath']; ?>" alt="Item Name">
                 </div>
             </div>
             <!-- End Product Image & Available Colors -->

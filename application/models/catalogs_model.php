@@ -8,6 +8,12 @@ class Catalogs_model extends CI_Model {
         return $query->result_array();
     }
 
+    function get_category($num)
+    {
+        $query = $this->db->get('productCategory',$num);
+        return $query->result_array();
+    }
+
 }
 
 /* End of file welcome.php */
