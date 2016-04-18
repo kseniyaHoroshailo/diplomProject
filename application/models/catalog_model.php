@@ -1,6 +1,14 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Catalogs_model extends CI_Model {
+class Catalog_model extends CI_Model {
+
+    public function get_catalog($title)
+    {
+        $this->db->where('title_en', $title);
+        $query = $this->db->get('pages');
+        return $query->row_array();
+
+    }
 
     function get_products($num, $offset)
     {
@@ -8,9 +16,9 @@ class Catalogs_model extends CI_Model {
         return $query->result_array();
     }
 
-    function get_category($num)
+    function get_cat()
     {
-        $query = $this->db->get('productCategory',$num);
+        $query = $this->db->get('productCategory');
         return $query->result_array();
     }
 

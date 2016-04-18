@@ -5,10 +5,11 @@
             <div class="col-footer col-md-3 col-xs-6">
                 <h3>Навигация</h3>
                 <ul class="no-list-style footer-navigate-section">
-                    <li><a href="<?= base_url(); ?>/index.php/welcome">Главная</a></li>
-                    <li><a href="<?= base_url(); ?>/index.php/about_us">О компании</a></li>
-                    <li><a href="<?= base_url(); ?>/index.php/catalog">Каталог продукции</a></li>
-                    <li><a href="<?= base_url(); ?>/index.php/contacts">Контакты</a></li>
+                    <?php foreach ($pages as $item): ?>
+                        <li>
+                            <a href="<?=base_url();?>index.php/<?=$item['title_en']?>/index"><?=$item['title']?></a>
+                        </li>
+                    <?php endforeach; ?>
                 </ul>
             </div>
 
