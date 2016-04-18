@@ -11,4 +11,11 @@ class About_us_model extends CI_Model
 
     }
 
+    function get_pages_info($title)
+    {
+        $this->db->where('title_en', $title);
+        $query = $this->db->get('pages');
+        return $query->row_array();
+    }
+
 }

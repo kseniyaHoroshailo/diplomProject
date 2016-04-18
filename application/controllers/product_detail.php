@@ -2,13 +2,17 @@
 
 class Product_detail extends CI_Controller {
 
-
-    public function index()
+    function view($title)
     {
-       $data['products'] = $this->product_detail_model->get_products();
-       $this->load->view('produc_detail_view',$data);
-    }
+        $this->load->model('catalog_model');
+        $data['pages'] = $this->menu_model->get_pages();
+        $data['pages_info'] = $this->catalog_model->get_catalogs($title);
+        $data['productCategory'] = $this->catalog_model->get_cat();    //вывод категорий товаров
+        $name = 'product_detail';
+        $this->template->page_view($data, $name);
 
+
+    }
 }
 
 /* End of file welcome.php */

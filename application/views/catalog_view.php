@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Каталог продукции</h1>
+                <h1>Каталог</h1>
             </div>
         </div>
     </div>
@@ -12,10 +12,10 @@
 <div class="section">
     <!-- Sidebar -->
     <div class="col-sm-2 blog-sidebar">
-        <h4>Категории</h4>
+        <h4><a href="<?=base_url();?>index.php/catalog">Все категории</a></h4>
         <ul class="blog-categories">
             <?php foreach ($productCategory as $item): ?>
-            <li><a href="#"><?= $item['title']; ?></a></li>
+            <li><a href="<?=base_url();?>index.php/catalog/<?=$item['title_en'];?>"><?= $item['title']; ?></a></li>
             <?php endforeach; ?>
         </ul>
     </div>
@@ -30,12 +30,12 @@
                     <div class="shop-item">
                         <!-- Product Image -->
                         <div class="image">
-                            <a href="page-product-details.html"><img src="<?= $item['imagePath']; ?>"
+                            <a href="<?=base_url();?>index.php/product_detail/<?= $item['id_product']; ?>"><img src="<?= $item['imagePath']; ?>"
                                                                      alt="Item Name"></a>
                         </div>
                         <!-- Product Title -->
                         <div class="title">
-                            <h3><a href="page-product-details.html"><?= $item['naimProduct']; ?></a></h3>
+                            <h3><a href="<?=base_url();?>index.php/product_detail/<?= $item['id_product']; ?>"><?= $item['naimProduct']; ?></a></h3>
                         </div>
                         <!-- Product Price-->
                         <div class="price">

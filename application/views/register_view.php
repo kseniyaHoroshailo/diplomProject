@@ -28,7 +28,7 @@
                             <input class="form-control" id="register-password2" type="password" placeholder="">
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn pull-right">Register</button>
+                            <button type="submit" class="btn pull-right" name="Register">Регистрация</button>
                             <div class="clearfix"></div>
                         </div>
                     </form>

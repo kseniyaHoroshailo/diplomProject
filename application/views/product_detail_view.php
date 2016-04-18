@@ -3,32 +3,42 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Продукт</h1>
+                <h1><?=$pages_info['naimProduct'];?></h1>
             </div>
         </div>
     </div>
 </div>
 
 <div class="section">
+    <!-- Sidebar -->
+    <div class="col-sm-2 blog-sidebar">
+        <h4><a href="<?=base_url();?>index.php/catalog">Все категории</a></h4>
+        <ul class="blog-categories">
+            <?php foreach ($productCategory as $item): ?>
+                <li><a href="<?=base_url();?>index.php/catalog/<?=$item['title_en'];?>"><?= $item['title']; ?></a></li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+    <!-- End Sidebar -->
     <div class="container">
         <div class="row">
-            <?php foreach($products as $item):?>
+            <?php /*foreach($product as $item):*/?>
             <!-- Product Image & Available Colors -->
             <div class="col-sm-6">
                 <div class="product-image-large">
-                    <img src="<?= $item['imagePath']; ?>" alt="Item Name">
+                    <img src="<?= $pages_info['imagePath']; ?>" alt="Item Name">
                 </div>
             </div>
             <!-- End Product Image & Available Colors -->
             <!-- Product Summary & Options -->
             <div class="col-sm-6 product-details">
-                <h4><?=$item['naimProduct'];?></h4>
+                <h4><?=$pages_info['naimProduct'];?></h4>
                 <div class="price">
-                    <span class="price-was">$959.99</span> <?=$item['price'];?>
+                    <span class="price-was">$959.99</span> <?=$pages_info['price'];?>
                 </div>
                 <h5>Описание</h5>
                 <p>
-                    <?=$item['description'];?>
+                    <?=$pages_info['description'];?>
                 </p>
                 <table class="shop-item-selections">
                     <!-- Quantity -->
@@ -47,7 +57,7 @@
                     </tr>
                 </table>
             </div>
-            <?php endforeach;?>
+            <?php /*endforeach;*/?>
             <!-- End Product Summary & Options -->
 
             <!-- Full Description & Specification -->
@@ -61,22 +71,9 @@
                     <!-- Tab Content (Full Description) -->
                     <div class="tab-content product-detail-info">
                         <div class="tab-pane active" id="tab1">
-                            <h4>Product Description</h4>
+                            <h4>Полное описание</h4>
                             <p>
-                                Donec hendrerit massa metus, a ultrices elit iaculis eu. Pellentesque ullamcorper augue lacus. Phasellus et est quis diam iaculis fringilla id nec sapien. Sed tempor ornare felis, non vulputate dolor. Etiam ornare diam vitae ligula malesuada tempor. Vestibulum nec odio vel libero ullamcorper euismod et in sapien. Suspendisse potenti.
-                            </p>
-                            <h4>Product Highlights</h4>
-                            <ul>
-                                <li>Nullam dictum augue nec iaculis rhoncus. Aenean lobortis fringilla orci, vitae varius purus eleifend vitae.</li>
-                                <li>Nunc ornare, dolor a ultrices ultricies, magna dolor convallis enim, sed volutpat quam sem sed tellus.</li>
-                                <li>Aliquam malesuada cursus urna a rutrum. Ut ultricies facilisis suscipit.</li>
-                                <li>Duis a magna iaculis, aliquam metus in, luctus eros.</li>
-                                <li>Aenean nisi nibh, imperdiet sit amet eleifend et, gravida vitae sem.</li>
-                                <li>Donec quis nisi congue, ultricies massa ut, bibendum velit.</li>
-                            </ul>
-                            <h4>Usage Information</h4>
-                            <p>
-                                Donec hendrerit massa metus, a ultrices elit iaculis eu. Pellentesque ullamcorper augue lacus. Phasellus et est quis diam iaculis fringilla id nec sapien. Sed tempor ornare felis, non vulputate dolor. Etiam ornare diam vitae ligula malesuada tempor. Vestibulum nec odio vel libero ullamcorper euismod et in sapien. Suspendisse potenti.
+                                <?=$pages_info['fullDescription'];?>
                             </p>
                         </div>
                         <!-- Tab Content (Specification) -->

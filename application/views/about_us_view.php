@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>О компании</h1>
+                <h1><?=$pages_info['title'];?></h1>
             </div>
         </div>
     </div>

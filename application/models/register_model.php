@@ -1,10 +1,13 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-class Register extends CI_Model {
+class Register_model extends CI_Model
+{
 
 
-    public function index()
+    function get_info($title)
     {
-
+        $this->db->where('title_en' , $title);
+        $query = $this->db->get('tech_sections');
+        return $query->row_array();
     }
 }

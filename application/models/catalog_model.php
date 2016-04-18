@@ -16,10 +16,31 @@ class Catalog_model extends CI_Model {
         return $query->result_array();
     }
 
+    function get_cat_products($cat)
+    {
+        $this->db->where('title_en', $cat);
+        $query = $this->db->get('product');
+        return $query->result_array();
+    }
+
     function get_cat()
     {
         $query = $this->db->get('productCategory');
         return $query->result_array();
+    }
+
+    function get_pages_info($title)
+    {
+        $this->db->where('title_en', $title);
+        $query = $this->db->get('pages');
+        return $query->row_array();
+    }
+
+    function get_catalogs($title)
+    {
+        $this->db->where('id_product', $title);
+        $query = $this->db->get('product');
+        return $query->row_array();
     }
 
 }

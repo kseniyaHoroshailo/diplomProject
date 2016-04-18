@@ -42,5 +42,9 @@ $route['default_controller'] = "pages/page/main";
 $route['404_override'] = '';
 
 $route['pages/(:any)'] = "pages/page/main/$1";
+
+$route['catalog/(:any)'] = "catalog/cat/$1";
+
+$route['product_detail/(:any)'] = "product_detail/view/$1";
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
