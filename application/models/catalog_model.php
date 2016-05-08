@@ -44,6 +44,3 @@ class Catalog_model extends CI_Model {
     }
 
 }
-
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */

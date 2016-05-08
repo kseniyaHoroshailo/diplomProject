@@ -3,7 +3,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Корзина</h1>
+                <image style="height: 60px; width: 60px; float:left;" src="<?=base_url()?>img/<?=$user_info['avatar']?>"></image>
+                <h1 style="padding: 20px 0 0 80px;"><?=$user;?></h1>
             </div>
         </div>
     </div>
@@ -12,129 +13,37 @@
 <div class="section">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <!-- Action Buttons -->
-                <div class="pull-right">
-                    <a href="#" class="btn btn-grey"><i class="glyphicon glyphicon-refresh"></i> UPDATE</a>
-                    <a href="#" class="btn"><i class="glyphicon glyphicon-shopping-cart icon-white"></i> CHECK OUT</a>
-                </div>
+            <!-- Sidebar -->
+            <div class="col-md-2 blog-sidebar">
+                <ul class="recent-posts">
+                    <li><a href="<?=base_url();?>index.php/register">Мои данные</a></li>
+                    <li><a href="<?=base_url();?>index.php/profile/change_data">Изменить данные</a></li>
+                    <li><a href="#">Корзина</a></li>
+                    <li><a href="<?=base_url();?>index.php/register/logout">Выйти</a></li>
+                </ul>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
+            <!-- End Sidebar -->
+            <div class="col-md-10">
                 <!-- Shopping Cart Items -->
                 <table class="shopping-cart">
-                    <!-- Shopping Cart Item -->
+                    <?php /*foreach ($products as $item): */?>
                     <tr>
-                        <!-- Shopping Cart Item Image -->
-                        <td class="image"><a href="page-product-details.html"><img src="img/product1.jpg" alt="Item Name"></a></td>
-                        <!-- Shopping Cart Item Description & Features -->
+                        <td class="image"><a href="page-product-details.html"><img src="<?/*= $item['imagePath']; */?>" alt="Item Name"></a></td>
                         <td>
-                            <div class="cart-item-title"><a href="page-product-details.html">LOREM IPSUM DOLOR</a></div>
-                            <div class="feature color">
-                                Color: <span class="color-white"></span>
-                            </div>
-                            <div class="feature">Size: <b>XXL</b></div>
+                            <div class="cart-item-title"><a href="page-product-details.html">название<?/*= $item['naimProduct']; */?></a></div>
                         </td>
-                        <!-- Shopping Cart Item Quantity -->
-                        <td class="quantity">
-                            <input class="form-control input-sm input-micro" type="text" value="1">
-                        </td>
-                        <!-- Shopping Cart Item Price -->
-                        <td class="price">$999.99</td>
-                        <!-- Shopping Cart Item Actions -->
+                        <td class="price">цена<?/*= $item['price']; */?></td>
                         <td class="actions">
                             <a href="#" class="btn btn-xs btn-grey"><i class="glyphicon glyphicon-pencil"></i></a>
                             <a href="#" class="btn btn-xs btn-grey"><i class="glyphicon glyphicon-trash"></i></a>
                         </td>
-                    </tr>
-                    <!-- End Shopping Cart Item -->
-                    <tr>
-                        <td class="image"><a href="page-product-details.html"><img src="img/product2.jpg" alt="Item Name"></a></td>
-                        <td>
-                            <div class="cart-item-title"><a href="page-product-details.html">LOREM IPSUM DOLOR</a></div>
-                            <div class="feature color">
-                                Color: <span class="color-orange"></span>
-                            </div>
-                            <div class="feature">Size: <b>XXL</b></div>
-                        </td>
-                        <td class="quantity">
-                            <input class="form-control input-sm input-micro" type="text" value="1">
-                        </td>
-                        <td class="price">$999.99</td>
-                        <td class="actions">
-                            <a href="#" class="btn btn-xs btn-grey"><i class="glyphicon glyphicon-pencil"></i></a>
-                            <a href="#" class="btn btn-xs btn-grey"><i class="glyphicon glyphicon-trash"></i></a>
+                        <td class="actions2">
+                            <a href="#" class="btn"><i class="glyphicon glyphicon-shopping-cart icon-white"></i>Купить</a>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="image"><a href="page-product-details.html"><img src="img/product3.jpg" alt="Item Name"></a></td>
-                        <td>
-                            <div class="cart-item-title"><a href="page-product-details.html">LOREM IPSUM DOLOR</a></div>
-                            <div class="feature color">
-                            </div>
-                            <div class="feature">Size: <b>XXL</b></div>
-                        </td>
-                        <td class="quantity">
-                            <input class="form-control input-sm input-micro" type="text" value="1">
-                        </td>
-                        <td class="price">$999.99</td>
-                        <td class="actions">
-                            <a href="#" class="btn btn-xs btn-grey"><i class="glyphicon glyphicon-pencil"></i></a>
-                            <a href="#" class="btn btn-xs btn-grey"><i class="glyphicon glyphicon-trash"></i></a>
-                        </td>
-                    </tr>
+                    <?php /*endforeach; */?>
                 </table>
                 <!-- End Shopping Cart Items -->
-            </div>
-        </div>
-        <div class="row">
-            <!-- Promotion Code -->
-            <div class="col-md-4  col-md-offset-0 col-sm-6 col-sm-offset-6">
-                <div class="cart-promo-code">
-                    <h6><i class="glyphicon glyphicon-gift"></i> Have a promotion code?</h6>
-                    <div class="input-group">
-                        <input class="form-control input-sm" id="appendedInputButton" type="text" value="">
-								<span class="input-group-btn">
-									<button class="btn btn-sm btn-grey" type="button">Apply</button>
-								</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Shipment Options -->
-            <div class="col-md-4 col-md-offset-0 col-sm-6 col-sm-offset-6">
-                <div class="cart-shippment-options">
-                    <h6><i class="glyphicon glyphicon-plane"></i> Shippment options</h6>
-                    <div class="input-append">
-                        <select class="form-control input-sm">
-                            <option value="1">Standard - FREE</option>
-                            <option value="2">Next day delivery - $10.00</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Shopping Cart Totals -->
-            <div class="col-md-4 col-md-offset-0 col-sm-6 col-sm-offset-6">
-                <table class="cart-totals">
-                    <tr>
-                        <td><b>Shipping</b></td>
-                        <td>Free</td>
-                    </tr>
-                    <tr>
-                        <td><b>Discount</b></td>
-                        <td>- $18.00</td>
-                    </tr>
-                    <tr class="cart-grand-total">
-                        <td><b>Total</b></td>
-                        <td><b>$163.55</b></td>
-                    </tr>
-                </table>
-                <!-- Action Buttons -->
-                <div class="pull-right">
-                    <a href="#" class="btn btn-grey"><i class="glyphicon glyphicon-refresh"></i> UPDATE</a>
-                    <a href="#" class="btn"><i class="glyphicon glyphicon-shopping-cart icon-white"></i> CHECK OUT</a>
-                </div>
             </div>
         </div>
     </div>

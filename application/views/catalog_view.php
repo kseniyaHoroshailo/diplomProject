@@ -15,7 +15,7 @@
         <h4><a href="<?=base_url();?>index.php/catalog">Все категории</a></h4>
         <ul class="blog-categories">
             <?php foreach ($productCategory as $item): ?>
-            <li><a href="<?=base_url();?>index.php/catalog/<?=$item['title_en'];?>"><?= $item['title']; ?></a></li>
+            <li><a href="<?=base_url();?>index.php/catalog/cat/<?=$item['title_en'];?>"><?= $item['title']; ?></a></li>
             <?php endforeach; ?>
         </ul>
     </div>

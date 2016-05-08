@@ -5,31 +5,31 @@
 			<!-- Slide 1 -->
 			<li class="bg4">
 				<!-- Slide Title -->
-				<h2 class="title">Responsive</h2>
+				<h2 class="title"></h2>
 				<!-- Slide Text -->
-				<h3 class="subtitle">It looks great on desktops, laptops, tablets and smartphones</h3>
+				<h3 class="subtitle">У ребёнка должно быть всё, что нужно!</h3>
 				<!-- Slide Image -->
-				<img class="slide-img" src="img/homepage-slider/sloderMain1.jpg" alt="Slide 1" />
+				<!--<img class="slide-img" src="<?/*=base_url();*/?>img/homepage-slider/sliderMain1.jpg" alt="Slide 1" />-->
 			</li>
 			<!-- End Slide 1 -->
 			<!-- Slide 2 -->
 			<li class="bg3">
 				<!-- Slide Title -->
-				<h2 class="title">Color Schemes</h2>
+				<h2 class="title"></h2>
 				<!-- Slide Text -->
-				<h3 class="subtitle">Comes with 5 color schemes and it's easy to make your own!</h3>
+				<h3 class="subtitle">Ваш ребёнок - наш самый большой начальник!</h3>
 				<!-- Slide Image -->
-				<img class="slide-img" src="img/homepage-slider/sliderMain2.jpg" alt="Slide 2" />
+				<!--<img class="slide-img" src="<?/*=base_url();*/?>img/homepage-slider/sliderMain2.jpg" alt="Slide 2" />-->
 			</li>
 			<!-- End Slide 2 -->
 			<!-- Slide 3 -->
 			<li class="bg1">
 				<!-- Slide Title -->
-				<h2 class="title">Feature Rich</h2>
+				<h2 class="title"></h2>
 				<!-- Slide Text -->
-				<h3 class="subtitle">Huge amount of components and over 30 sample pages!</h3>
+				<h3 class="subtitle"></h3>
 				<!-- Slide Image -->
-				<img class="slide-img" src="img/homepage-slider/sliderMain3.jpg" alt="Slide 3" />
+				<!--<img class="slide-img" src="<?/*=base_url();*/?>img/homepage-slider/sliderMain3.jpg" alt="Slide 3" />-->
 			</li>
 			<!-- End Slide 3 -->
 		</ul>
@@ -44,59 +44,42 @@
 </div>
 <!-- End Homepage Slider -->
 
-<!-- Press Coverage -->
+<!-- new toys -->
 <div class="section">
 	<div class="container">
+		<h2>Новинки</h2>
 		<div class="row">
+			<?php foreach ($latest_products as $item): ?>
 			<div class="col-md-4 col-sm-6">
-				<div class="in-press press-wired">
-					<a href="#">Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae</a>
+				<div class="service-wrapper">
+					<img style="width: 100%; height: 100%" src="<?= $item['imagePath']; ?>" alt="Service 1">
+					<h3><?= $item['naimProduct']; ?></h3>
+					<p><?= $item['description']; ?></p>
+					<a  class="btn" href="<?=base_url();?>index.php/product_detail/<?= $item['id_product']; ?>">Подробнее</a>
 				</div>
 			</div>
-			<div class="col-md-4 col-sm-6">
-				<div class="in-press press-mashable">
-					<a href="#">Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae</a>
-				</div>
-			</div>
-			<div class="col-md-4 col-sm-6">
-				<div class="in-press press-techcrunch">
-					<a href="#">Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae</a>
-				</div>
-			</div>
+			<?php endforeach; ?>
 		</div>
 	</div>
 </div>
-<!-- Press Coverage -->
+<!-- End new toys -->
 
-<!-- Services -->
+<!-- seil -->
 <div class="section">
 	<div class="container">
+		<h2>Скидки</h2>
 		<div class="row">
-			<div class="col-md-4 col-sm-6">
-				<div class="service-wrapper">
-					<img src="img/service-icon/diamond.png" alt="Service 1">
-					<h3>Aliquam in adipiscing</h3>
-					<p>Praesent rhoncus mauris ac sollicitudin vehicula. Nam fringilla turpis turpis, at posuere turpis aliquet sit amet condimentum</p>
-					<a href="#" class="btn">Read more</a>
+			<?php foreach ($latest_products as $item): ?>
+				<div class="col-md-4 col-sm-6">
+					<div class="service-wrapper">
+						<img style="width: 100%; height: 100%" src="<?= $item['imagePath']; ?>" alt="Service 1">
+						<h3><?= $item['naimProduct']; ?></h3>
+						<p><?= $item['description']; ?></p>
+						<a  class="btn" href="<?=base_url();?>index.php/product_detail/<?= $item['id_product']; ?>">Подробнее</a>
+					</div>
 				</div>
-			</div>
-			<div class="col-md-4 col-sm-6">
-				<div class="service-wrapper">
-					<img src="img/service-icon/ruler.png" alt="Service 2">
-					<h3>Curabitur mollis</h3>
-					<p>Suspendisse eget libero mi. Fusce ligula orci, vulputate nec elit ultrices, ornare faucibus orci. Aenean lectus sapien, vehicula</p>
-					<a href="#" class="btn">Read more</a>
-				</div>
-			</div>
-			<div class="col-md-4 col-sm-6">
-				<div class="service-wrapper">
-					<img src="img/service-icon/box.png" alt="Service 3">
-					<h3>Vivamus mattis</h3>
-					<p>Phasellus posuere et nisl ac commodo. Nulla facilisi. Sed tincidunt bibendum cursus. Aenean vulputate aliquam risus rutrum scelerisque</p>
-					<a href="#" class="btn">Read more</a>
-				</div>
-			</div>
+			<?php endforeach; ?>
 		</div>
 	</div>
 </div>
-<!-- End Services -->
+<!-- End seil -->

@@ -1,17 +1,4 @@
-<!-- Navigation & Logo-->
-<div class="mainmenu-wrapper">
-    <div class="container">
-        <div class="menuextras">
-            <div class="extras">
-                <ul>
-                    <li class="shopping-cart-items"><i class="glyphicon glyphicon-shopping-cart icon-white"></i> <a
-                            href="page-shopping-cart.html"><b>Корзина</b></a></li>
-                    <li><a href="page-login.html">Войти</a></li>
-                    <li><a href="<?=base_url();?>index.php/register">Регистрация</a></li>
-                </ul>
-            </div>
-        </div>
-        <nav id="mainmenu" class="mainmenu">
+ <nav id="mainmenu" class="mainmenu">
             <ul>
                 <li class="logo-wrapper"><a href="<?= base_url(); ?>index.php/pages/main"><img
                             src="<?= base_url(); ?>/img/mPurpose-logo.png"

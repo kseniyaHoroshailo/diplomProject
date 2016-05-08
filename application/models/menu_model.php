@@ -17,4 +17,12 @@ class Menu_model extends CI_Model
         $query = $this->db->get('pages');
         return $query->row_array();
     }
+
+    function get_latest_products()
+    {
+        $this->db->order_by('id_product','desc');
+        $this->db->limit('3');
+        $query = $this->db->get('product');
+        return $query->result_array();
+    }
 }

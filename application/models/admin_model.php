@@ -1,6 +1,6 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-class Register_model extends CI_Model
+class Admin_model extends CI_Model
 {
 
     function get_info($title)
@@ -10,7 +10,7 @@ class Register_model extends CI_Model
         return $query->row_array();
     }
 
-    function check_login($username)
+    /*function check_login($username)
     {
         $this->db->where('username', $username);
         $this->db->select('username');
@@ -23,12 +23,12 @@ class Register_model extends CI_Model
         {
             return TRUE;
         }
-    }
+    }*/
 
-    function save_data($new)
+    /*function save_data($new)
     {
         $this->db->insert('client',$new);
-    }
+    }*/
 
     function login($user, $pswd)
     {

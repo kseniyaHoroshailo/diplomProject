@@ -31,28 +31,31 @@
                 <!-- Contact Form -->
                 <h3>Отправьте нам сообщение</h3>
                 <div class="contact-form-wrapper">
-                    <form class="form-horizontal" role="form">
+                    <form method="post" class="form-horizontal" role="form" action="<?=base_url();?>index.php/contacts/send">
                         <div class="form-group">
                             <label for="Name" class="col-sm-3 control-label"><b>Ваше имя</b></label>
                             <div class="col-sm-9">
-                                <input class="form-control" id="Name" type="text" placeholder="">
+                                <input class="form-control" id="Name" type="text"  name="username" placeholder="" value="<?=set_value('username')?>">
+                                <span class="show_error"><?=form_error('username')?></span>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="contact-email" class="col-sm-3 control-label"><b>Ваш Email</b></label>
                             <div class="col-sm-9">
-                                <input class="form-control" id="contact-email" type="text" placeholder="">
+                                <input class="form-control" id="contact-email"  name="email" type="text" placeholder="" value="<?=set_value('email')?>">
+                                <span class="show_error"><?=form_error('email')?></span>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="contact-message" class="col-sm-3 control-label"><b>Сообщение</b></label>
                             <div class="col-sm-9">
-                                <textarea class="form-control" rows="5" id="contact-message"></textarea>
+                                <textarea class="form-control" rows="5"  name="message" id="contact-message" value="<?=set_value('message')?>"></textarea>
+                                <span class="show_error"><?=form_error('message')?></span>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-sm-12">
-                                <button type="submit" class="btn pull-right">Отправить</button>
+                                <input name="send" type="submit" class="btn pull-right" value="Отправить"></input>
                             </div>
                         </div>
                     </form>
