@@ -7,5 +7,11 @@ class Profile_model extends CI_Model
         $this->db->update('client',$change);
     }
 
+    function product_info($id){
+        $this->db->where('id_product', $id);
+        $query = $this->db->get('product');
+        return $query->row_array();
+    }
+
 
 }

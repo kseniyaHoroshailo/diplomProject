@@ -25,24 +25,27 @@
             <!-- End Sidebar -->
             <div class="col-md-10">
                 <!-- Shopping Cart Items -->
+                <?php /*if ($cart = $this->cart->contents()): */?><!--
                 <table class="shopping-cart">
-                    <?php /*foreach ($products as $item): */?>
+                    <?php /*foreach ($cart as $item): */?>
                     <tr>
-                        <td class="image"><a href="page-product-details.html"><img src="<?/*= $item['imagePath']; */?>" alt="Item Name"></a></td>
+                        <td class="image"><a href="page-product-details.html"><img src="<?/*= $item['imagePath']; */?>" alt="<?/*= $item['name']; */?>"></a></td>
                         <td>
-                            <div class="cart-item-title"><a href="page-product-details.html">название<?/*= $item['naimProduct']; */?></a></div>
+                            <div class="cart-item-title"><a href="page-product-details.html"><?/*= $item['name']; */?></a></div>
                         </td>
-                        <td class="price">цена<?/*= $item['price']; */?></td>
+                        <td class="price"><?/*= $item['subtotal'] */?></td>
                         <td class="actions">
                             <a href="#" class="btn btn-xs btn-grey"><i class="glyphicon glyphicon-pencil"></i></a>
-                            <a href="#" class="btn btn-xs btn-grey"><i class="glyphicon glyphicon-trash"></i></a>
+                            <a href="<?/*=base_url();*/?>index.php/profile/remove/"<?/*=$item['rowid']; */?> class="btn btn-xs btn-grey"><i class="glyphicon glyphicon-trash"></i></a>
                         </td>
                         <td class="actions2">
                             <a href="#" class="btn"><i class="glyphicon glyphicon-shopping-cart icon-white"></i>Купить</a>
                         </td>
                     </tr>
+
                     <?php /*endforeach; */?>
                 </table>
+                --><?php /*endif; */?>
                 <!-- End Shopping Cart Items -->
             </div>
         </div>

@@ -15,7 +15,7 @@
         <h4><a href="<?=base_url();?>index.php/catalog">Все категории</a></h4>
         <ul class="blog-categories">
             <?php foreach ($productCategory as $item): ?>
-            <li><a href="<?=base_url();?>index.php/catalog/cat/<?=$item['title_en'];?>"><?= $item['title']; ?></a></li>
+            <li><a href="<?=base_url();?>index.php/catalog/cat/<?=$item['id_category'];?>"><?= $item['title']; ?></a></li>
             <?php endforeach; ?>
         </ul>
     </div>
@@ -47,8 +47,8 @@
                         </div>
                         <!-- Add to Cart Button -->
                         <div class="actions">
-                            <a href="page-product-details.html" class="btn"><i
-                                    class="icon-shopping-cart icon-white"></i> Добавить в корзину</a>
+                            <a  class="btn" href="<?=base_url();?>index.php/product_detail/<?= $item['id_product']; ?>"><i
+                                    class="icon-shopping-cart icon-white"></i> Подробнее</a>
                         </div>
                     </div>
                     <!-- End Product -->
