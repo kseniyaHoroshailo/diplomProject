@@ -63,23 +63,3 @@
 	</div>
 </div>
 <!-- End new toys -->
-
-<!-- seil -->
-<div class="section">
-	<div class="container">
-		<h2>Скидки</h2>
-		<div class="row">
-			<?php foreach ($latest_products as $item): ?>
-				<div class="col-md-4 col-sm-6">
-					<div class="service-wrapper">
-						<img style="width: 100%; height: 100%" src="<?= $item['imagePath']; ?>" alt="Service 1">
-						<h3><?= $item['naimProduct']; ?></h3>
-						<p><?= $item['description']; ?></p>
-						<a  class="btn" href="<?=base_url();?>index.php/product_detail/<?= $item['id_product']; ?>">Подробнее</a>
-					</div>
-				</div>
-			<?php endforeach; ?>
-		</div>
-	</div>
-</div>
-<!-- End seil -->

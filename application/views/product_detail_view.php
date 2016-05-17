@@ -22,7 +22,7 @@
     <!-- End Sidebar -->
     <div class="container">
         <div class="row">
-            <?php echo form_open('product_detail/buscet_add'); ?>
+            <form method="post" role="form" action="<?=base_url();?>index.php/product_detail/buscet_add">
             <!-- Product Image & Available Colors -->
             <div class="col-sm-6">
                 <div class="product-image-large">
@@ -53,16 +53,12 @@
                         <td>&nbsp;</td>
                         <td>
                             <?php echo form_hidden('id', $pages_info['id_product']); ?>
-                            <?php echo form_submit(array(
-                                'action' => 'Добавить в корзину',
-                                'class' => 'btn btn',
-                                'value' => 'Добавить в корзину'
-                            )); ?>
+                            <a class="btn btn" href="<?=base_url();?>index.php/product_detail/buscet_add/<?= $pages_info['id_product']; ?>">Добавить в корзину</a>
                         </td>
                     </tr>
                 </table>
             </div>
-            <?php echo form_close(); ?>
+            </form>
             <!-- End Product Summary & Options -->
 
             <!-- Full Description & Specification -->

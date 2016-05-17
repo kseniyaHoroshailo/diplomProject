@@ -21,7 +21,7 @@ class Product_detail extends CI_Controller {
 
     function buscet_add($id)
     {
-        $this->load->model('register_model');
+        $this->load->model('product_detail_model');
         $data['pages'] = $this->menu_model->get_pages();
         $this->load->library('form_validation');
         $data['pages_info'] = $this->menu_model->get_pages_info('buscet');
@@ -34,20 +34,20 @@ class Product_detail extends CI_Controller {
         $data['user_info']['email'] = $this->session->userdata('email');
         $data['error'] = '';
         if( ! empty($data['user'])) {
-            $name = 'buscet_add';
-            $this->template->page_view($data, $name);
-            $this->load->model('product_detail_model');
+            //$this->load->model('product_detail_model');
             $product = $this->product_detail_model->get($this->input->post('id'));
             $insert = array(
                 'id'      => $this->input->post('id'),
                 'qty'     => 1,
                 'price'   => $product['price'],
-                'name'    => $product['naimProducts'],
+                'name'    => $product['naimProduct'],
                 'imagePath' => $product['imagePath'],
                 'id_client' => $product['id_client']
             );
             $this->cart->insert($insert);
-            redirect(base_url('index.php/product_detail'));
+            redirect(base_url('index.php/catalog'));
+            $name = 'buscet_add';
+            $this->template->page_view($data, $name);
         } else {
             redirect(base_url('index.php/register'));
         }

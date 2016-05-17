@@ -43,4 +43,21 @@ class Admin extends CI_Controller
         $this->session->unset_userdata('status');
         redirect(base_url('index.php'));
     }
+
+    function showmessages()
+    {
+        $this->load->model('adminmessages_model');
+        $data['pages'] = $this->menu_model->get_pages();
+        $name = 'adminmessages';
+        $data['pages_info'] = $this->adminmessages_model->get_info('adminmessages');
+        $data['user'] = $this->session->userdata('user');
+        $data['user_info']['status'] = $this->session->userdata('status');
+        $data['user_info']['avatar'] = $this->session->userdata('avatar');
+        $data['user_info']['firstname'] = $this->session->userdata('firstname');
+        $data['user_info']['lastname'] = $this->session->userdata('lastname');
+        $data['user_info']['adress'] = $this->session->userdata('adress');
+        $data['user_info']['email'] = $this->session->userdata('email');
+        $data['messages'] = $this->adminmessages_model->get_messages();
+        $this->template->page_view($data, $name);
+    }
 }

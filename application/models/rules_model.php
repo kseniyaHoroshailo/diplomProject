@@ -21,7 +21,7 @@ class Rules_model extends CI_Model
         (
             'field' => 'message',
             'label' => 'Сообщение',
-            'rules' => 'required|xss_clean|min_length[1]|max_length[2000]|alpha_dash'
+            'rules' => 'required|xss_clean|min_length[1]|max_length[2000]'
         ),
     );
 
