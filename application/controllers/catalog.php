@@ -52,8 +52,6 @@ class Catalog extends CI_Controller {
         $data['products'] = $this->catalog_model->get_cat_products($cat);
         $name = 'catalog';
         $this->template->page_view($data, $name);
-
-
     }
 
 }

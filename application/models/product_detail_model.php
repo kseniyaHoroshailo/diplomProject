@@ -2,8 +2,9 @@
 
 class Product_detail_model extends CI_Model {
 
-    function get_products()
-    {
-
+    function get($id) {
+        $results = $this->db->get_where('product', array('id_product' => $id))->result();
+        $result = $results[1];
+        return $result;
     }
 }

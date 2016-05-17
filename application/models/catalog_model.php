@@ -42,11 +42,5 @@ class Catalog_model extends CI_Model {
         $query = $this->db->get('product');
         return $query->row_array();
     }
-
-    function get($id) {
-        $results = $this->db->get_where('product', array('id_product' => $id))->result();
-        $result = $results[1];
-        return $result;
-    }
-
+    
 }

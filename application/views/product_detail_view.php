@@ -22,7 +22,7 @@
     <!-- End Sidebar -->
     <div class="container">
         <div class="row">
-            <?php echo form_open('profile/buscet_add'); ?>
+            <?php echo form_open('product_detail/buscet_add'); ?>
             <!-- Product Image & Available Colors -->
             <div class="col-sm-6">
                 <div class="product-image-large">
@@ -34,7 +34,7 @@
             <div class="col-sm-6 product-details">
                 <h4><?=$pages_info['naimProduct'];?></h4>
                 <div class="price">
-                    <span class="price-was">$959.99</span> <?=$pages_info['price'];?>
+                    <?=$pages_info['price'];?>
                 </div>
                 <h5>Описание</h5>
                 <p>
